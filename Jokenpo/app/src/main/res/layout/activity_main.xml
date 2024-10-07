@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="409dp"
+        android:layout_height="729dp"
+        android:orientation="vertical"
+        android:padding="25dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="91dp"
+            android:layout_marginBottom="25dp"
+            app:srcCompat="@drawable/icon" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/pcSelected"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:contentDescription="Seleção do Computador"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/full_pedra"
+                tools:ignore="ImageContrastCheck" />
+
+            <TextView
+                android:id="@+id/textViewResult"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:fontFamily="sans-serif-condensed"
+                android:text="Aguardando..."
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                tools:ignore="TextContrastCheck" />
+
+            <ImageView
+                android:id="@+id/playerSelected"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="Seleção do Jogador"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/full_papel"
+                tools:ignore="ImageContrastCheck" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textViewChoice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Faça sua escolha:"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/buttonPedra"
+                style="@android:style/Widget.ImageButton"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/full_pedra"
+                android:contentDescription="Pedra"
+                tools:ignore="ImageContrastCheck" />
+
+            <ImageButton
+                android:id="@+id/buttonPapel"
+                style="@android:style/Widget.ImageButton"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/full_papel"
+                android:contentDescription="Papel"
+                tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck" />
+
+            <ImageButton
+                android:id="@+id/buttonTesoura"
+                style="@android:style/Widget.ImageButton"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/full_tesoura"
+                android:contentDescription="Tesoura"
+                tools:ignore="ImageContrastCheck" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/playerPoints"
+                android:layout_width="54dp"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="34sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="x"
+                android:textColor="@color/white"
+                android:textSize="34sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/pcPoints"
+                android:layout_width="54dp"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="34sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
